@@ -29,9 +29,7 @@ const notifications = [
   },
 ]
 
-type CardProps = React.ComponentProps<typeof Card>
-
-export default async function Verification({ className, ...props }: CardProps) {
+export default async function Verification() {
   const session = await auth();
   console.log(session);
 
@@ -63,7 +61,7 @@ export default async function Verification({ className, ...props }: CardProps) {
   return (
     <div className="flex items-center justify-center min-h-screen text-white">
       <div className="grid place-items-center min-h-screen">
-        <Card className={cn("w-[380px]", className)} {...props}>
+        <Card className="w-[380px]">
           <CardHeader>
             <CardTitle>Account Verification</CardTitle>
             <CardDescription className="text-xs">Please click the button below to verify your account. This step is only for verifying if you are a customer.</CardDescription>
