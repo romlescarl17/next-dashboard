@@ -1,8 +1,8 @@
 'use client';
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { FaDiscord } from "react-icons/fa";
 import React, { useState } from "react";
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "./ui/use-toast"
 
 function VerifyButton({ session }: { session: any }) {
   const [loading, setLoading] = useState(false);

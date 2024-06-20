@@ -1,6 +1,6 @@
 "use client"
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast"
+import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast"
 import React, { useState, useEffect } from "react";
 import { signOut } from "next-auth/react";
 import { RiLogoutBoxRFill } from "react-icons/ri";

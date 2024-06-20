@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "./ui/badge";
 import { ArrowUpRight } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "./ui/card";
+import { Skeleton } from "./ui/skeleton";
 import axios from "axios";
-import { Button } from "@/components/ui/button";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Button } from "./ui/button";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { ScrollArea } from "./ui/scroll-area";
 
 interface ChangelogItems {
     version: string;

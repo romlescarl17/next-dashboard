@@ -1,7 +1,7 @@
 "use client"
 import { FaGoogle } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast"
+import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast"
 import React, { useState, useEffect } from "react";
 import { signIn } from "next-auth/react";
 import { FaDiscord } from "react-icons/fa";

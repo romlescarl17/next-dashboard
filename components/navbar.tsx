@@ -12,13 +12,13 @@ import {
     Package2,
     Search,
   } from "lucide-react"
-  import { Input } from "@/components/ui/input"
-  import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-  import { Button } from "@/components/ui/button"
+  import { Input } from "./ui/input"
+  import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+  import { Button } from "./ui/button"
   import Link from "next/link"
-  import { auth } from "@/auth"
-  import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-  import { Badge } from "@/components/ui/badge"
+  import { auth } from "../auth"
+  import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+  import { Badge } from "./ui/badge"
   import { TbHexagonLetterM } from "react-icons/tb";
 
 export async function Navbar() {
