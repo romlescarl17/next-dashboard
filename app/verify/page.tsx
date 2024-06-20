@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "../../lib/utils"
+import { Button } from "../../components/ui/button"
 import {
   Card,
   CardContent,
@@ -7,11 +7,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "../../components/ui/card"
 import { FaDiscord, FaLock } from "react-icons/fa";
-import { auth } from "@/auth"
+import { auth } from "../../auth"
 import { FaCheck } from "react-icons/fa";
-import VerifyButton from "@/components/verify"
+import VerifyButton from "../../components/verify"
 import Head from "next/head";
 import Link from "next/link";
 import { MdCelebration } from "react-icons/md";

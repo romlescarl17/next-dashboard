@@ -2,19 +2,19 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/avatar"
+} from "../../components/ui/avatar"
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "../../components/ui/card"
 
-import { Navbar } from "@/components/navbar"
-import { auth } from "@/auth"
+import { Navbar } from "../../components/navbar"
+import { auth } from "../../auth"
 import { FaExclamationCircle } from "react-icons/fa";
-import MainCards from "@/components/cards";
-import Changelogs from "@/components/changelogs";
+import MainCards from "../../components/cards";
+import Changelogs from "../../components/changelogs";
 
 export default async function Dashboard() {
   const session = await auth()

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "../../components/ui/card"
 import { FaGoogle } from "react-icons/fa6";
 import * as React from "react"
 import { useRouter, redirect } from "next/navigation";
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "../../components/ui/use-toast"
 import { FaClock, FaLock } from "react-icons/fa";
-import { auth, signIn } from "@/auth";
-import LoginWithDiscord from "@/components/authenticate";
-import Logout from "@/components/logout";
+import { auth, signIn } from "../../auth";
+import LoginWithDiscord from "../../components/authenticate";
+import Logout from "../../components/logout";
 
 export default async function Authenticate() {
   const session = await auth();

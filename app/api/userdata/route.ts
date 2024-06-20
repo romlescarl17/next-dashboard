@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 import { ObjectId } from "mongodb";
-import { auth } from "@/auth";
+import { auth } from "../../../auth";
 
 export async function GET(request: NextRequest) {
     // Get the user data from mondoDB
