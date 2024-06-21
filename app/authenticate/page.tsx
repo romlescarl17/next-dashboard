@@ -15,9 +15,9 @@ import { FaClock, FaLock } from "react-icons/fa";
 import { auth, signIn } from "../../auth";
 import LoginWithDiscord from "../../components/authenticate";
 import Logout from "../../components/logout";
+import { GetServerSidePropsContext } from "next";
 
-export default async function Authenticate() {
-  const session = await auth();
+export default async function Authenticate({ session }: { session: any }) {
   const time = new Date();
 
   if (session) {
@@ -68,4 +68,14 @@ export default async function Authenticate() {
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const session = await auth(ctx);
+
+  return {
+    props: {
+      session: session || null
+    }
+  }
 }

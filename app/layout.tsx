@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { SessionProvider } from "next-auth/react";
+import { AppProps } from "next/app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,17 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
       <script src="https://kit.fontawesome.com/3a9cf2a124.js" crossOrigin="anonymous"></script>
-        <SessionProvider>
+        <SessionProvider session={session}>
           <main>
-            {children}
+            <Component {...pageProps} />
           </main>
           <Toaster />
         </SessionProvider>
