@@ -15,9 +15,10 @@ import { FaClock, FaLock } from "react-icons/fa";
 import { auth, signIn } from "../../auth";
 import LoginWithDiscord from "../../components/authenticate";
 import Logout from "../../components/logout";
-import { GetServerSidePropsContext } from "next";
+import { useSession } from "next-auth/react";
 
-export default async function Authenticate({ session }: { session: any }) {
+export default async function Authenticate() {
+  const { data: session } = useSession();
   const time = new Date();
 
   if (session) {
@@ -68,14 +69,4 @@ export default async function Authenticate({ session }: { session: any }) {
       </div>
     </div>
   )
-}
-
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const session = await auth(ctx);
-
-  return {
-    props: {
-      session: session || null
-    }
-  }
 }
