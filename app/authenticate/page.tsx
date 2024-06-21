@@ -18,7 +18,7 @@ import Logout from "../../components/logout";
 import { useSession } from "next-auth/react";
 
 export default async function Authenticate() {
-  const { data: session } = useSession();
+  const session = await auth();
   const time = new Date();
 
   if (session) {
